@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Spin Wheel | Play</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="option">
+      <p>Mode :</p>
+      <select name="mode" id="mode" required>
+        <option value="random">Random</option>
+        <option value="zonk">Zonk</option>
+        <option value="jackpot">Jackpot</option>
+      </select>
+      <div class="add">
+        <label for="new_item">Add item :</label>
+        <input type="text" name="new_item" id="add" />
+        <div class="upper-button">
+          <button class="add">Add</button>
+          <button class="reset">Reset</button>
+        </div>
+        <div>
+          <p class="item_counter">Current item : 0/8</p>
+          <p class="item_container"></p>
+        </div>
+        <button class="apply">Apply</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="spinBtn">Spin</div>
+
+      <div class="wheel">
+        <!-- <div class="number" style="--i: 1; --clr: #db7093">
+          <span>1jt</span>
+        </div>
+
+        <div class="number" style="--i: 2; --clr: #20b2aa">
+          <span>50rb</span>
+        </div>
+
+        <div class="number" style="--i: 3; --clr: #daa520">
+          <span>1rb</span>
+        </div>
+
+        <div class="number" style="--i: 4; --clr: #ff340f">
+          <span>Zonk</span>
+        </div>
+
+        <div class="number" style="--i: 5; --clr: #4169e1">
+          <span>100rb</span>
+        </div>
+
+        <div class="number" style="--i: 6; --clr: #3cb371">
+          <span>15rb</span>
+        </div>
+
+        <div class="number" style="--i: 7; --clr: #d63e92">
+          <span>JACKPOT</span>
+        </div>
+
+        <div class="number" style="--i: 8; --clr: #ff7f50">
+          <span>20rb</span>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
