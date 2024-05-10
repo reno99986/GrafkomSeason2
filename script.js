@@ -25,19 +25,22 @@ let isHoldingPointer = false;
 canvasElem.addEventListener("mousedown", function (e) {
   getMousePosition(canvasElem, e);
   ball.velocityY = 0;
+  ball.velocityX = 0
   isHoldingPointer = true;
 
 });
 
 canvasElem.addEventListener("mouseup", function (e) {
+
   isHoldingPointer = false;
 });
 
 canvasElem.addEventListener("mousemove", function (e) {
   if (isHoldingPointer) {
     getMousePosition(canvasElem, e);
-    ball.velocityY = 0;
-      console.log(MouseEvent.clientX)
+    ball.velocityY = e.movementY;
+    ball.velocityX = e.movementX
+      console.log(e.movementX,e.movementY)
   }
 });
 
@@ -54,7 +57,7 @@ let ball = {
   height: 100,
   velocityX: 0,
   velocityY: 0,
-  gravity: 1, // Adjust this value to control the strength of gravity
+  gravity: 0, // Adjust this value to control the strength of gravity
   rotationAngle: 0,
 };
 
@@ -65,7 +68,7 @@ let ball2 = {
   height: 100,
   velocityX: 0,
   velocityY: 0,
-  gravity: 10, // Adjust this value to control the strength of gravity
+  gravity: 0, // Adjust this value to control the strength of gravity
 };
 
 function drawPix(x, y, bold) {
@@ -140,9 +143,7 @@ function drawDDA(x1, x2, y1, y2, tebal, warna) {
   }
 }
 
-let gravityspeed = 10;
 window.requestAnimationFrame(loop);
-let initVal = 100;
 
 let fpsInterval = 1000 / 60; // 60 FPS
 
@@ -173,12 +174,12 @@ function loop(now) {
 
     // Bounce if it hits the bottom
     if (ball.y + ball.height >= Canvas.height) {
-      ball.velocityY *= -1.1; // Reduce velocity on bounce
+      ball.velocityY *= -1.002; // Reduce velocity on bounce
       ball.y = Canvas.height - ball.height;
     }
     // Bounce if it hits the top
     if (ball.y <= ball.height) {
-      ball.velocityY *= -0.5; // Reverse velocity to bounce
+      ball.velocityY *= -0.2; // Reverse velocity to bounce
       ball.y = ball.height;
     }
     // Bounce if it hits the right
@@ -187,11 +188,11 @@ function loop(now) {
       ball.x = Canvas.width - ball.width;
     }
 
-        // Bounce if it hits the left
-        if (ball.x <= ball.width) {
-          ball.velocityX *= -1; // Reverse velocity to bounce
-          ball.x = ball.width;
-        }
+    // Bounce if it hits the left
+    if (ball.x <= ball.width) {
+    ball.velocityX *= -1; // Reverse velocity to bounce
+    ball.x = ball.width;
+      }
 
 
     // Calculate rotation angle based on ball's horizontal movement
