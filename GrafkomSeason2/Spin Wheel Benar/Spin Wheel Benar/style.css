@@ -1,0 +1,74 @@
+body {
+  background-color: #333;
+}
+
+.header {
+  padding: 40px;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.header h1,
+p {
+  text-align: center;
+}
+
+#winner {
+  font-size: 30px;
+}
+
+.wheel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.zonkCounter {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 80px;
+  color: white;
+}
+
+.option {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 80px;
+  color: white;
+}
+
+.center-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 30px solid white;
+  position: absolute;
+  top: 50%;
+  right: -220%;
+  transform: translateY(-50%);
+}
+textarea {
+  background-color: rgba(20, 20, 20, 0.2);
+  caret-color: #fff;
+  resize: none;
+  color: #fff;
+}
+.inputArea {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

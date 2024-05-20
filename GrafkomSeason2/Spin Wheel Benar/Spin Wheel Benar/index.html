@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <div class="zonkCounter">
+      <p>Zonk Counter : <span id="counter">0</span></p>
+      <select name="mode" id="mode" required>
+        <option value="random">Random</option>
+        <option value="zonk">Zonk</option>
+      </select>
+    </div>
+    <div class="header">
+      <h1>WINNER</h1>
+      <p id="winner">NONE</p>
+    </div>
+    <div class="wheel">
+      <canvas class="" id="canvas" width="500" height="500"></canvas>
+      <div class="center-circle" onclick="spin()">
+        <div class="triangle"></div>
+      </div>
+    </div>
+    <div class="inputArea" onchange="createWheel()">
+      <textarea rows="20" cols="30">
+Laptop
+Nilai A
+Nilai E
+Gitar
+Mancing
+Perahu</textarea
+      >
+    </div>
+
+    <script src="color.js"></script>
+    <!-- <script type="module" src="test.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>

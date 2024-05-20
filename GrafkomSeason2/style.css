@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.panelData{
+    position:relative ;
+    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
+    
+}
